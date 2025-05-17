@@ -28,9 +28,9 @@
 
     <label>Atau Pilih dari Galeri:</label>
     <div class="gallery">
-      <img src="https://i.ibb.co/N7yWQzS/sky.jpg" onclick="useGalleryImage(this.src)">
-      <img src="https://i.ibb.co/vH7hKym/forest.jpg" onclick="useGalleryImage(this.src)">
-      <img src="https://i.ibb.co/jRQ9T1P/animal.jpg" onclick="useGalleryImage(this.src)">
+      <img src="https://i.ibb.co/N7yWQzS/sky.jpg" onclick="useGalleryImage(this.src)" alt="Langit">
+      <img src="https://i.ibb.co/vH7hKym/forest.jpg" onclick="useGalleryImage(this.src)" alt="Hutan">
+      <img src="https://i.ibb.co/jRQ9T1P/animal.jpg" onclick="useGalleryImage(this.src)" alt="Hewan">
     </div>
 
     <button onclick="saveStory()">Simpan Cerita</button>
@@ -43,11 +43,13 @@
     <div id="preview">
       <h3 id="previewTitle"></h3>
       <p id="previewStory"></p>
-      <img id="storyImage" style="display:none;">
+      <img id="storyImage" style="display:none;" alt="Ilustrasi Cerita">
     </div>
 
     <h3>Galeri Cerita Siswa</h3>
     <div id="galleryList"></div>
+
+    <div class="credit">Created by Zulfikar Fajar Bahari</div>
   </div>
 
   <!-- html2pdf.js CDN -->
