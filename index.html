@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Story Creator Digital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Story Creator Digital</h2>
+    <label>Judul Cerita:</label>
+    <input type="text" id="title" placeholder="Tulis judul ceritamu...">
+
+    <label>Isi Cerita:</label>
+    <textarea id="story" rows="6" placeholder="Tulis isi cerita di sini..."></textarea>
+
+    <label>Pilih Latar Belakang:</label>
+    <select id="background">
+      <option value="">Putih</option>
+      <option value="sky">Langit</option>
+      <option value="forest">Hutan</option>
+      <option value="beach">Pantai</option>
+      <option value="night">Malam</option>
+      <option value="autumn">Musim Gugur</option>
+    </select>
+
+    <label>Unggah Gambar Ilustrasi:</label>
+    <input type="file" id="imageInput" accept="image/*">
+
+    <label>Atau Pilih dari Galeri:</label>
+    <div class="gallery">
+      <img src="https://i.ibb.co/N7yWQzS/sky.jpg" onclick="useGalleryImage(this.src)">
+      <img src="https://i.ibb.co/vH7hKym/forest.jpg" onclick="useGalleryImage(this.src)">
+      <img src="https://i.ibb.co/jRQ9T1P/animal.jpg" onclick="useGalleryImage(this.src)">
+    </div>
+
+    <button onclick="saveStory()">Simpan Cerita</button>
+    <button onclick="loadStory()">Muat Cerita Terakhir</button>
+    <button onclick="generatePreview()">Lihat Pratinjau</button>
+    <button onclick="downloadPDF()">Unduh sebagai PDF</button>
+    <button onclick="playNarration()">Putar Narasi</button>
+    <button onclick="stopNarration()">Hentikan Narasi</button>
+
+    <div id="preview">
+      <h3 id="previewTitle"></h3>
+      <p id="previewStory"></p>
+      <img id="storyImage" style="display:none;">
+    </div>
+
+    <h3>Galeri Cerita Siswa</h3>
+    <div id="galleryList"></div>
+  </div>
+
+  <!-- html2pdf.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
